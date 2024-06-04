@@ -1,0 +1,40 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.invitationCard {
+  margin: 10px;
+  background-color: aquamarine;
+  width: 350px;
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+.invitationCard:hover {
+  scale: 1.1;
+  transition: 1s;
+}
+.invitationInfo {
+  padding: 20px;
+}
+.invitationTitle {
+  margin-bottom: 10px;
+}
+.invitationSubTitle {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.linkInvitationId {
+  text-decoration: none;
+  color: black;
+  background-color: #ffff;
+  padding: 10px;
+  border-radius: 20px;
+}
+.linkInvitationId:hover {
+  opacity: 0.5;
+  transition: 1.5s;
+}
