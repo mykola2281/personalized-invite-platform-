@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './styles.module.css';
+import { createNote } from '@/api/services';
 const CreateNote = () => {
   const route = useRouter();
   const [isEmail, setIsEmail] = useState(true);
@@ -22,8 +23,14 @@ const CreateNote = () => {
     }));
   };
 
-  function CreateNoteSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function CreateNoteSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    await createNote({
+      title: data.title,
+      description: data.details,
+      phone: data.inputValue,
+      date: new Date(data.date).toISOString()
+    })
     console.log(data, 'on submit');
     setData((prevData) => ({
       ...prevData,
