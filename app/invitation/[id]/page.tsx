@@ -9,7 +9,6 @@ import { useEffect, useState } from "react"
     const {id}:any = useParams()
     useEffect(()=>{
         getOneNote(id).then((it:any)=>setCurrentNote({...it}))
-        
     },[])
     
     console.log(currentNote,'currentNote')
