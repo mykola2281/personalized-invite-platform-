@@ -7,7 +7,6 @@ import { useEffect, useState } from "react"
  const Hello =  ()=>{
     const [currentNote ,setCurrentNote]= useState(null)
     const {id}:any = useParams()
-
     useEffect(()=>{
         getOneNote(id).then((it:any)=>setCurrentNote({...it}))
         
