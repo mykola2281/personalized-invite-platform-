@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './NavBarStyles.module.css';
 
 const NavBar = () => {
+
   return (
     <>
       <nav className={styles.NavBar}>
